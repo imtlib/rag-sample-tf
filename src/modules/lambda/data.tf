@@ -17,6 +17,6 @@ data "aws_iam_policy_document" "assume_role" {
 
 data "archive_file" "function_info" {
   type        = "zip"
-  source_file = "${path.module}/src/lambda_function.py"
+  source_dir  = "${path.module}/src"
   output_path = "${path.module}/archive/lambda_function.zip"
 }
