@@ -1,0 +1,12 @@
+version: "3"
+services:
+  terraform:
+    container_name: "terraform"
+    image: rag-sample-tf:latest
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./src:/root/src
+      - ~/.aws:/root/.aws
+    command: tail -f /dev/null
