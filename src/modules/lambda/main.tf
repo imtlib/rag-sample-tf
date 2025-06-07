@@ -4,7 +4,7 @@ resource "aws_lambda_function" "lambda_function" {
   filename      = data.archive_file.function_info.output_path
   handler       = "lambda_function.lambda_handler"
   runtime       = "python3.10"
-  layers        = ["arn:aws:lambda:ap-northeast-1:767398075406:layer:python-layer:1"]
+  layers        = ["arn:aws:lambda:ap-northeast-1:767398075406:layer:python-layer:2"]
 
   source_code_hash = data.archive_file.function_info.output_base64sha256
 
